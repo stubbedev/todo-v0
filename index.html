@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/resets.css">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <title>TO DO APP</title>
+</head>
+
+<body>
+<header>
+    <svg viewBox="0 0 10 10" class="svg-1">
+        <path d="M2,2 L8,8" />
+      </svg>
+      
+      <svg viewBox="0 0 10 10" class="svg-2">
+        <path d="M2,8 L5,2 L8,8" />
+      </svg>
+      
+      <svg viewBox="0 0 10 10" class="svg-3">
+        <path d="M2,2 Q8,2 8,8" />
+      </svg>
+      
+      <svg viewBox="0 0 10 10" class="svg-4">
+        <path d="M2,5 C2,8 8,8 8,5" />
+      </svg>
+      
+      <svg viewBox="0 0 10 10" class="svg-5">
+        <path d="M2,2 L8,2 L2,5 L8,5 L2,8 L8,8" />
+      </svg>
+      
+      <svg viewBox="0 0 10 10" class="svg-6">
+        <path d="M2,5 A 5 25 0 0 1 8 8" />
+      </svg>
+      
+      <svg viewBox="0 0 10 10" class="svg-7">
+        <path d="M2,5 S2,-2 4,5 S7,8 8,4" />
+      </svg>
+      
+      <svg viewBox="0 0 10 10" class="svg-8">
+        <path d="M5,2 Q 2,5 5,8" />
+      </svg>
+      
+      <svg viewBox="0 0 10 10" class="svg-9">
+        <path d="M2,2 Q5,2 5,5 T8,8" />
+      </svg>
+      
+</header>
+<main>
+    <controls>
+      <trigger utl="action_filter">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+        </svg>
+      </trigger>
+        <trigger utl="action_quickadd_btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+          </svg>
+        </trigger>
+        <textarea type="text" data-type="input" utl="action_quickadd_text" value="" placeholder="Write down something..."></textarea>
+
+    </controls>
+    <board>
+        <sidebar>
+            <settings>
+                <trigger utl="session_tasks">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-layout-text-sidebar-reverse" viewBox="0 0 16 16">
+                    <path d="M12.5 3a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h5zm0 3a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h5zm.5 3.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5zm-.5 2.5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h5z"/>
+                    <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2zM4 1v14H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h2zm1 0h9a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5V1z"/>
+                  </svg>&nbsp;Task List
+                </trigger>
+                <trigger utl="session_profile">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                  </svg>&nbsp;User
+                </trigger>
+                <trigger utl="session_purge">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tree" viewBox="0 0 16 16">
+                    <path d="M8.416.223a.5.5 0 0 0-.832 0l-3 4.5A.5.5 0 0 0 5 5.5h.098L3.076 8.735A.5.5 0 0 0 3.5 9.5h.191l-1.638 3.276a.5.5 0 0 0 .447.724H7V16h2v-2.5h4.5a.5.5 0 0 0 .447-.724L12.31 9.5h.191a.5.5 0 0 0 .424-.765L10.902 5.5H11a.5.5 0 0 0 .416-.777l-3-4.5zM6.437 4.758A.5.5 0 0 0 6 4.5h-.066L8 1.401 10.066 4.5H10a.5.5 0 0 0-.424.765L11.598 8.5H11.5a.5.5 0 0 0-.447.724L12.69 12.5H3.309l1.638-3.276A.5.5 0 0 0 4.5 8.5h-.098l2.022-3.235a.5.5 0 0 0 .013-.507z"/>
+                  </svg>&nbsp;Purge
+                </trigger>
+                <trigger utl="session_end">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-power" viewBox="0 0 16 16">
+                    <path d="M7.5 1v7h1V1h-1z"/>
+                    <path d="M3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z"/>
+                  </svg>&nbsp;Logout
+                </trigger>
+            </settings>
+        </sidebar>
+        <fora>
+            <tasks>
+            </tasks>
+            <profile style="display: none;">
+
+            </profile>
+        </fora>
+    </board>
+</main>
+</body>
+<footer>
+    <canvas id="fingerprint" width="300" height="300" ></canvas>
+    <script defer src="./assets/index.js"></script>
+</footer>
+</html>
