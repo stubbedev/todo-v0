@@ -141,28 +141,6 @@
          d: path("M2,2 Q8,2 5,5 T8,8");
     }
 }
-:root {
-    --background: #282a36;
-    --current-line: #44475a;
-    --secondary-line: #6a5e7a;
-    --selection: #44475a;
-    --foreground: #f8f8f2;
-    --comment: #6272a4;
-    --cyan:#8be9fd;
-    --green:#50fa7b;
-    --orange:#ffb86c;
-    --pink:#ff79c6;
-    --purple:#bd93f9;
-    --red:#ff5555;
-    --yellow:#f1fa8c;
-    --spacing-1: 0.25rem;
-    --spacing-2: 0.5rem;
-    --spacing-3: 1rem;
-    --spacing-4: 1.5rem;
-    --tight: fit-content;
-    --small-shadow: 0 0 1.25rem var(--current-line);
-    --small-border-radius: 5px;
-}
 *{
     transition: all 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -171,6 +149,7 @@
 }
 html {
     background-color: var(--selection);
+    font-family: "JetBrains Mono", monospace;
 }
 body {
     display: flex;
@@ -185,10 +164,7 @@ body {
     border-style: solid;
     border-color: var(--background);
     background-color: var(--background);
-    font-family: monospace;
     font-size: var(--spacing-3);
-    -webkit-box-shadow: 0px 0px 30px 0px rgba(255,121,198,0.1); 
-    box-shadow: 0px 0px 30px 0px rgba(255,121,198,0.1);
 }
 .svg-1 path {
     animation-name: svg-1;
@@ -245,7 +221,7 @@ body {
 .svg-9:hover path {
     d: path("M2,2 Q8,2 5,5 T8,8");
 }
-header svg {
+svg-wrapper svg {
     width: 30%;
     height: 30%;
     background: transparent;
@@ -254,23 +230,26 @@ header svg {
     animation-fill-mode: both;
 }
 
-header svg:hover path {
+svg-wrapper svg:hover path {
     transition-delay: 0s;
     animation-direction: normal;
     filter: blur(0.5px);
     overflow: visible;
 }
-header svg:nth-child(3n+1):hover path {
+svg-wrapper svg:nth-child(4n+1):hover path {
     stroke: var(--purple);
 }
-header svg:nth-child(3n+2):hover path {
+svg-wrapper svg:nth-child(4n+2):hover path {
     stroke: var(--orange);
 }
-header svg:nth-child(3n+3):hover path {
+svg-wrapper svg:nth-child(4n+3):hover path {
     stroke: var(--pink);
 }
+svg-wrapper svg:nth-child(4n+4):hover path {
+    stroke: var(--cyan);
+}
 
-header svg polyline, svg line, header svg path {
+svg-wrapper svg polyline, svg line, svg-wrapper svg path {
     fill: none;
     stroke:var(--background);
     stroke-linecap: round;
@@ -301,9 +280,9 @@ main svg path{
 item-content:hover svg path, subitem-content:hover svg path{
     fill: var(--background);
 }
-header {
+svg-wrapper {
     user-select: none;
-    grid-area:header;
+    grid-area:svg-wrapper;
     display: flex;
     overflow: hidden;
     justify-content: center;
@@ -322,7 +301,7 @@ header {
     width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
     width: fill-available;
 }
-header:hover {
+svg-wrapper:hover {
     background-color: var(--comment);
     color: var(--foreground);
     transition: all 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -407,7 +386,6 @@ trigger:hover, trigger:focus, trigger:active, trigger:hover path {
 }
 
 controls input {
-    font-family: monospace;
     width: 100%;
 }
 
@@ -475,8 +453,8 @@ item-checkbox, subitem-checkbox {
 }
 item {
     width: 100%;
-    width: -moz-available;          /* WebKit-based browsers will ignore this. */
-    width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    width: -moz-available;
+    width: -webkit-fill-available;
     width: fill-available;
     background-color: var(--background);
     display: flex;
@@ -572,7 +550,6 @@ item-wrapper subitems subitem-content {
 
 subitem-input {
     width: calc(100% - var(--spacing-4) * 2 - var(--spacing-3));
-    font-family: monospace;
     background-color: var(--background);
     display: flex;
     flex-direction: column;

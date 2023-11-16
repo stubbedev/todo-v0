@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/resets.css">
-    <link rel="stylesheet" href="./assets/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=JetBrains+Mono">
+    <link rel="stylesheet" href="css/resets.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>TO DO APP</title>
 </head>
 
 <body>
-<header>
+<svg-wrapper>
     <svg viewBox="0 0 10 10" class="svg-1">
         <path d="M2,2 L8,8" />
       </svg>
@@ -35,7 +37,7 @@
       <svg viewBox="0 0 10 10" class="svg-6">
         <path d="M2,5 A 5 25 0 0 1 8 8" />
       </svg>
-      
+
       <svg viewBox="0 0 10 10" class="svg-7">
         <path d="M2,5 S2,-2 4,5 S7,8 8,4" />
       </svg>
@@ -47,8 +49,7 @@
       <svg viewBox="0 0 10 10" class="svg-9">
         <path d="M2,2 Q5,2 5,5 T8,8" />
       </svg>
-      
-</header>
+</svg-wrapper>
 <main>
     <controls>
       <trigger utl="action_filter">
@@ -104,7 +105,7 @@
 </main>
 </body>
 <footer>
-    <canvas id="fingerprint" width="300" height="300" ></canvas>
-    <script defer src="./assets/index.js"></script>
+    <canvas id="fingerprint" width="300" height="300"></canvas>
+    <script defer src="js/main.js"></script>
 </footer>
 </html>
